@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,82 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoginScreen_AutoLoyout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AzQ-ca-EUf" customClass="SAButton" customModule="LoginScreen_AutoLoyout" customModuleProvider="target">
+                                <rect key="frame" x="30" y="597" width="315" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ABw-bP-Kgl"/>
+                                </constraints>
+                                <state key="normal" title="LOGIN"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qzE-EH-kHC" customClass="SATextField" customModule="LoginScreen_AutoLoyout" customModuleProvider="target">
+                                <rect key="frame" x="30" y="507" width="315" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="trD-wY-X60"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YYR-Gh-JnD" customClass="SATextField" customModule="LoginScreen_AutoLoyout" customModuleProvider="target">
+                                <rect key="frame" x="30" y="445" width="315" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="71y-yP-kma"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball" translatesAutoresizingMaskIntoConstraints="NO" id="boP-gQ-1do">
+                                <rect key="frame" x="92.5" y="88.5" width="190" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="Iwq-8m-CnV"/>
+                                    <constraint firstAttribute="height" constant="190" id="bBy-VY-hwF"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Cricket" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="dRT-g2-qIV">
+                                <rect key="frame" x="30" y="293" width="315" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="zvK-uF-jkT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qzE-EH-kHC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="Fz1-AD-sug"/>
+                            <constraint firstAttribute="trailing" secondItem="YYR-Gh-JnD" secondAttribute="trailing" constant="30" id="Jwv-Tb-rwX"/>
+                            <constraint firstAttribute="trailing" secondItem="dRT-g2-qIV" secondAttribute="trailing" constant="30" id="KW5-Zi-omh"/>
+                            <constraint firstItem="qzE-EH-kHC" firstAttribute="top" secondItem="YYR-Gh-JnD" secondAttribute="bottom" constant="12" id="YFs-9q-o2j"/>
+                            <constraint firstItem="AzQ-ca-EUf" firstAttribute="top" secondItem="qzE-EH-kHC" secondAttribute="bottom" constant="40" id="dsK-rp-6SZ"/>
+                            <constraint firstItem="dRT-g2-qIV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="eQZ-tP-FtS"/>
+                            <constraint firstAttribute="trailing" secondItem="qzE-EH-kHC" secondAttribute="trailing" constant="30" id="f9w-zD-mQE"/>
+                            <constraint firstAttribute="trailing" secondItem="AzQ-ca-EUf" secondAttribute="trailing" constant="30" id="gam-m7-MWt"/>
+                            <constraint firstItem="boP-gQ-1do" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-150" id="k26-VS-u9H"/>
+                            <constraint firstItem="AzQ-ca-EUf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="kQe-IN-YCV"/>
+                            <constraint firstItem="boP-gQ-1do" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kwc-EK-NrP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AzQ-ca-EUf" secondAttribute="bottom" constant="20" id="mp0-Yz-e3Y"/>
+                            <constraint firstItem="dRT-g2-qIV" firstAttribute="top" secondItem="boP-gQ-1do" secondAttribute="bottom" constant="14.5" id="s2c-49-HkD"/>
+                            <constraint firstItem="YYR-Gh-JnD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="yRg-8i-VVo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="logoImageView" destination="boP-gQ-1do" id="Eli-MZ-mWO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ball" width="3872" height="2592"/>
+    </resources>
 </document>
